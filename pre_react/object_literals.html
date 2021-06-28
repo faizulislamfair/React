@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Object Literals</h2>
+    
+    <p>Objects are variables too. But objects can contain many values.</p>
+
+    <p id="one"></p>
+
+    <p>You define (and create) a JavaScript object with an object literal:</p>
+
+    <p id="two"></p>
+
+    <script>
+        // Create an object:
+        var car = {type:"BMW", model:"500", color:"White"};
+
+        // Display some data from the object:
+        document.getElementById("one").innerHTML = "The car type is " + car.type;
+    </script>
+
+    <script>
+        // Create an object:
+        var person = {firstName: "Jon",
+          lastName: "Snow", age:55, eyeColor:"blue"};
+
+        // Display some data from the object:
+        document.getElementById("two").innerHTML
+        = person.firstName + " is " + person.age + " years old.";  
+    </script>
+
+</body>
+</html>

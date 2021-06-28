@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array reduce() Method</h2>
+<p>The reduce() method reduces the array to a single value.</p>
+<p>The reduce() method executes a provided function for each value of the array (from left-to-right).</p>
+<p>The return value of the function is stored in an accumulator (result/total).</p>
+<p>Note: reduce() does not execute the function for array elements without values.</p>
+<p>Note: This method does not change the original array.</p>
+
+<p>Subtract the numbers in the array, starting from the left:</p>
+
+<button onclick="myReductionTwo()">Reduce Me</button>
+
+<p id="one"></p>
+
+<br><br>
+
+<p>Round all the numbers in an array, and display the sum:</p>
+
+<button onclick="myReductionThree()">Reduce Me Again</button>
+
+<p>Sum of numbers in array: <span id="two"></span> </p>
+
+
+<br><br>
+
+
+<h2>JavaScript Array reduceRight() Method</h2>
+
+<p>The reduceRight() method reduces the array to a single value.</p>
+<p>The reduceRight() method executes a provided function for each value of the array (from right-to-left).</p>
+<p>The return value of the function is stored in an accumulator (result/total).</p>
+<p>Note: reduceRight() does not execute the function for array elements without values.</p>
+
+<p>Subtract the numbers in the array, starting from the right:</p>
+
+<button onclick="myReductionRightTwo()">Reduce Me Right</button>
+
+<p id="three"></p>
+
+<br><br>
+
+<p>Click the button to get the sum from subtracting the numbers in the array right-to-left.</p>
+
+<button onclick="myReductionRightThree()">Reduce Me Right Too</button>
+
+<p>Sum of numbers in array: <span id="four"></span></p>
+
+<script>
+
+    var numbers = [155, 50, 5];
+
+    
+    function myReduction(total, num) {
+        return total - num;
+    }
+
+    function myReductionTwo(total, num){
+        document.getElementById("one").innerHTML = numbers.reduce(myReduction);
+    }
+
+
+</script>
+
+
+<script>
+
+var numberstwo = [5.5, 10.3, 15.1, 20.7];
+
+function getSum(totaltwo, numtwo) {
+    return totaltwo + Math.round(numtwo);
+}
+
+function myReductionThree(item) {
+    document.getElementById("two").innerHTML = numberstwo.reduce(getSum, 0);
+}
+
+</script>
+
+
+<script>
+
+    var numbersthree = [175, 50, 25];
+    
+    
+    function myReductionRight(totalthree, numthree) {
+      return totalthree - numthree;
+    }
+
+    function myReductionRightTwo(totalthree, numthree) {
+        document.getElementById("three").innerHTML = numbersthree.reduceRight(myReductionRight);
+    }
+
+</script>
+
+<script>
+
+    var numbersfour = [2, 45, 30, 100];
+    
+    function getSumTwo(totalfour, numfour) {
+      return totalfour - numfour;
+    }
+    function myReductionRightThree(itemtwo) {
+      document.getElementById("four").innerHTML = numbersfour.reduceRight(getSumTwo);
+    }
+
+</script>
+
+</body>
+</html>
+
+

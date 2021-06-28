@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+</head>
+<body>
+
+    /* Destructuring */
+
+// Assign variables from objects    
+    
+<script>
+
+var voxel = {x:5.5, y:10.5, z:15.5};
+
+const {x, y, z} = voxel;
+
+console.log(x,y,z);
+
+</script>
+
+// Assign variables from nested objects
+
+<script>
+
+const c = {
+    start: {a: 5, b:55},
+    end: {a:55, b:-5}
+};
+const { start: { a: startA, b: startB }} = c;
+
+console.log(startA);
+
+</script>
+
+// Assign Variables from Arrays
+
+<script>
+    const [q,,, r] = [1, 2, 3, 4, 5];
+    console.log(q, r);
+</script>
+
+// Rest Operator to Reassign Array Elements
+
+<script>
+
+const [m, n, ...rest] = [1, 2, 3, 4, 5];
+console.log(m, n);
+console.log(rest)
+
+</script>
+
+// Pass an object as a Function's Parameters
+
+<script>
+
+const profileUpdate = ({ name, nationality}) => {
+    
+}
+
+</script>
+
+
+
+</body>
+</html>

@@ -3,15 +3,18 @@ import ReactDOM from 'react-dom';
 
 
 // const element = React.createElement('h1', {className: 'heading'}, 'Hello, world!');
-const index = 0;
+//const index = 0;
 
-setInterval(() => {
-  const element = (
-    <h1 className="heading" tabIndex={index}>
-       <span className="text">Banana Monkey {new Date().toLocaleTimeString()}</span>
-       <img src="" />
+// component returns an element
+
+function Clock({locale}) {
+  return (
+    <h1 className="heading">
+       <span className="text">Banana Monkey {new Date().toLocaleTimeString(locale)}</span>
     </h1>
   );
-  ReactDOM.render(element, document.getElementById('root'));
-}, 1000);
+}
+  ReactDOM.render(<Clock locale="bn-BD" />, document.getElementById('root'));
 
+// We can re-use React Component 
+// Components receive properties from outside

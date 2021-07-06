@@ -14,12 +14,39 @@ import ReactDOM from 'react-dom';
 //   );
 // }
 
+// class Clock extends React.Component {
+//   render() {
+//     return (
+//         <h1 className="heading">
+//           <span className="text">
+//               Hello {new Date().toLocaleTimeString(this.props.locale)}
+//           </span>
+//         </h1>
+//     );
+//   }
+
+// }
+
+// const ClockComponent = new Clock();
+
+// class extend kore nile object r define korte hoyna, tokhon <Clock /> ei syntax e lekha jaay
+// class extend korle render use korte hobe, props payte hoyle aladavabe vetore handaye dite hobe 
+
+// ReactDOM.render(<Clock locale="bn-BD"/>, document.getElementById('root'));
+
+// ReactDOM.render(<Clock locale="bn-BD" />, document.getElementById('root'));
+
+// We can re-use React Component 
+// Components receive properties from outside
+
+
 class Clock extends React.Component {
+  
   render() {
     return (
         <h1 className="heading">
           <span className="text">
-              Hello {new Date().toLocaleTimeString(this.props.locale)}
+              Panda {this.props.children} {new Date().toLocaleTimeString(this.props.locale)}
           </span>
         </h1>
     );
@@ -27,14 +54,6 @@ class Clock extends React.Component {
 
 }
 
-// const ClockComponent = new Clock();
+ReactDOM.render(<Clock locale="bn-BD"> buddies </Clock>, document.getElementById('root'));
 
-// class extend kore nile object r define korte hoyna, tokhon <Clock /> ei syntax e lekha jaay
-// class extend korle render use korte hobe, props payte hoyle aladavabe vetore handaye dite hobe 
-
-ReactDOM.render(<Clock locale="bn-BD"/>, document.getElementById('root'));
-
-// ReactDOM.render(<Clock locale="bn-BD" />, document.getElementById('root'));
-
-// We can re-use React Component 
-// Components receive properties from outside
+// Never change props inside components

@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+</head>
+<body>
+    <h2>JavaScript Arrow Function</h2>
+
+    <p>Arrow functions were introduced in ES6.</p>
+    <p>Arrow functions allow us to write shorter function syntax.</p>
+
+    <h4 id="one"></h4>
+
+    <br> <br>
+
+    <p>This example shows an Arrow Function without the brackets or the return keyword.</p>
+    Note: This works only if the function has only one statement.
+    <p>Even shorter syntax.</p>
+
+    <h4 id="two"></h4>
+
+    <br> <br>
+
+    <p>With parameter</p>
+
+    <h4 id="three"></h4>
+
+    <br> <br>
+
+    <p>For only one Arrow Function, parentheses can be skipped</p>
+
+    <h4 id="four"></h4>
+
+    <br> <br>
+
+    <p>With arrow functions the this keyword always represents the object that defined the arrow function.</p>
+
+    <p>This example demonstrate that in Arrow Functions, the "this" keyword represents the object that owns the function, no matter who calls the function.</p>
+
+    <p>Click the button to execute the "hello" function again, and you will see that "this" still  represents the window object.</p>
+
+    <button id="btn">Button</button>
+
+    <h4 id="five"></h4>
+
+    <script>
+    var something;
+
+    something = () => {
+        return "It's a beautiful weather today maybe or maybe not";
+    }
+
+    document.getElementById("one").innerHTML
+    = something();
+
+    </script>
+
+    <script>
+     
+     var life;
+
+     life = () => "What is life anyways?";
+
+     document.getElementById("two").innerHTML = life();
+
+    </script>
+
+    <script>
+
+    var heart;
+
+    heart = (val) => "Cholo chole jay, " + val;
+
+    document.getElementById("three").innerHTML
+    = heart("jabena?")
+
+    </script>
+
+
+    <script>
+
+    var level_five;
+
+    level_five = value => "Cholo " + value;
+
+    document.getElementById("four").innerHTML
+    = level_five("neme jay!")
+
+    </script>
+    
+    <script>
+ 
+    var hello;
+
+    hello = () => {
+        document.getElementById("five").innerHTML += this;
+    }
+
+    //The window object calls the function:
+    window.addEventListener("load", hello);
+
+    //A button object calls the function:
+    document.getElementById("btn").addEventListener("click", hello);
+
+    </script>
+
+</body>
+</html>

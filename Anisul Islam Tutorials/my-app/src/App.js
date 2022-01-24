@@ -8,9 +8,11 @@ function App(){
       <br />
       <br />
 
-      <Card />
-      <Card />
-      <Card />
+      <Card titleText="Call Mother" descText="This is the desc1"/>
+      <Card titleText="Call Brother" descText="This is the desc2"/>
+      <Card titleText="Call Sister" descText="This is the desc3"/>
+      
+      <a href=""></a>
     
     </div>
 }

@@ -1,16 +1,20 @@
 import React from "react";
 import Card from "./components/Card";
+import Data from './data.json';
 
 function App(){
+
+   
+   // <Card titleText={Data[x].title} descText={Data[x].desc}/>
+
+
     return   <div>
     <h1 className='headingStyle'>React to the Rescue</h1>
       
       <br />
       <br />
 
-      <Card titleText="Call Mother" descText="This is the desc1"/>
-      <Card titleText="Call Brother" descText="This is the desc2"/>
-      <Card titleText="Call Sister" descText="This is the desc3"/>
+      { Data.map((item, index) => <Card key={index} titleText={item.title} descText={item.desc}/>) } 
       
       <a href=""></a>
     

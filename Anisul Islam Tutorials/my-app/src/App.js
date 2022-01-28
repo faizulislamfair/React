@@ -1,24 +1,16 @@
 import React from "react";
-import Card from "./components/Card";
-import Data from './data.json';
+import Card1 from "./components/Card1";
+import Card2 from "./components/Card2";
 
 function App(){
 
-   
-   // <Card titleText={Data[x].title} descText={Data[x].desc}/>
-
-
-    return   <div>
-    <h1 className='headingStyle'>React to the Rescue</h1>
-      
-      <br />
-      <br />
-
-      { Data.map((item, index) => <Card key={index} titleText={item.title} descText={item.desc}/>) } 
-      
-      <a href=""></a>
-    
-    </div>
+    return ( 
+        <div>
+          <Card1 name="card1" desc="this is card1" />
+          <br />
+          <Card2 name="card2" />
+        </div>
+    )
 }
 
 export default App;

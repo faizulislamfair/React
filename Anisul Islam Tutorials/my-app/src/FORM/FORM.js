@@ -4,34 +4,32 @@ import style from './form.module.css'
 
 function FORM() {
 
-   const [name, setName] = useState('')
-   const [email, setEmail] = useState('')
-   const [password, setPassword] = useState('')
+   const [user, setUser] = useState({name: '', email: '', password: ''})
+   const {name, email, password} = user
 
 
-   const handleNameChange = (e) => {
-        setName(e.target.value);
-   }
+  const handleChange = (e) => {
+      
+    //  const fieldName = e.target.name;
 
+    //  if(fieldName === 'name'){
+    //     setUser({name: e.target.value, email, password});
+    //  }
+    //  else if(fieldName === 'email'){
+    //     setUser({name, email: e.target.value, password});
+    //  }
+    //  else if(fieldName === 'password'){
+    //     setUser({name, email, password: e.target.value});
+    //  }
 
-   const handleEmailChange = (e) => {
-        setEmail(e.target.value);
-   }
+    setUser({...user, [e.target.name]:e.target.value})
 
-
-   const handlePasswordChange = (e) => {
-        setPassword(e.target.value);
-   }
+  }
 
          
    const handleSubmit = (e) => {
        console.log("Form is submitted");
-       let userInfo = {
-           name : name,
-           email : email,
-           password : password
-       }
-       console.log(userInfo);
+       console.log(user);
        e.preventDefault();
    }
 
@@ -48,7 +46,7 @@ function FORM() {
                      name="name" 
                      id="name" 
                      value={name}
-                     onChange={handleNameChange} 
+                     onChange={handleChange} 
                      required />
               </div>
               
@@ -58,7 +56,7 @@ function FORM() {
                      name="email" 
                      id="email" 
                      value={email}
-                     onChange={handleEmailChange} 
+                     onChange={handleChange} 
                      required />
               </div> 
 
@@ -68,7 +66,7 @@ function FORM() {
                      name="password" 
                      id="password" 
                      value={password}
-                     onChange={handlePasswordChange} 
+                     onChange={handleChange} 
                      required />
               </div> 
 

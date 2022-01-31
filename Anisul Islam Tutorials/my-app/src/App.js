@@ -1,10 +1,12 @@
 import React from "react";
-import EVENT_BINDING from "./EVENT_BINDING/index";
+import HOOKS_USESTATE1 from "./HOOKS_USESTATE/index1";
+import HOOKS_USESTATE2 from "./HOOKS_USESTATE/index2";
 
 function App() {
      return(
        <div>
-         <EVENT_BINDING />
+         <HOOKS_USESTATE1 />
+         <HOOKS_USESTATE2 />
        </div>
      )
 }

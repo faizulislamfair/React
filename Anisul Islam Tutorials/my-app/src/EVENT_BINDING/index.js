@@ -17,7 +17,7 @@ class EVENT_BINDING extends Component {
         })
     }
 
-    render () {
+    render() {
 
         const {count} = this.state
 

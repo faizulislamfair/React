@@ -1,19 +1,17 @@
 import React from "react";
 
-import Child from "./components/STATE_LIFTING/Child";
+import Home from "./components/STATE_LIFTING/Home";
+
+// App.js -> Components -> Home.js (todos= ["item1", "item2"]) -> Todos 
+//-> Todo
+// Components -> NewTodo
 
 
 function App() {
 
-  const data = "I am from parent (app)";
-
-  const handleChildData = (childData) => {
-   console.log("App: " + childData);
-  }
-
      return(
        <div>
-        <Child data={data}  onChildData={handleChildData}/>
+       <Home />
        </div>
      )
 }

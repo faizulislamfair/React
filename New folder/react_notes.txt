@@ -1,3 +1,0 @@
-**Always start component names with a capital letter.
-
-**All React components must act like pure functions with respect to their props.

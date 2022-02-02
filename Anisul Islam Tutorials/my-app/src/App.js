@@ -1,13 +1,13 @@
 import React from "react";
 
-import UseEffectExample from "./useEffect/UseEffectExample";
+import DataFetch from "./useEffect/DataFetch";
 
 
 function App() {
 
      return(
        <div>
-        <UseEffectExample />
+         <DataFetch />        
        </div>
      )
 }
